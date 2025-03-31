@@ -45,7 +45,7 @@ public class CIVPFragment extends Fragment {
         crcInd.setViewPager(vPager);
 
         Handler handler = new Handler();
-        handler.postDelayed(runnable(), 3000);
+        handler.postDelayed(runnable(), 5000);
 
         vPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -54,7 +54,7 @@ public class CIVPFragment extends Fragment {
             @Override
             public void onPageSelected(int position) {
                 handler.removeCallbacks(runnable());
-                handler.postDelayed(runnable(), 3000);
+                handler.postDelayed(runnable(), 5000);
             }
 
             @Override

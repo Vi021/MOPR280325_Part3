@@ -13,6 +13,9 @@ import androidx.fragment.app.FragmentManager;
 import com.google.android.material.tabs.TabLayout;
 
 import vn.iotstar.ltmob280325.R;
+import vn.iotstar.ltmob280325.SliderImages.CircleIndicator3_ViewPager2.CI3VP2Fragment;
+import vn.iotstar.ltmob280325.SliderImages.CircleIndicator_ViewPager.CIVPFragment;
+import vn.iotstar.ltmob280325.SliderImages.SliderView.SVFragment;
 import vn.iotstar.ltmob280325.SliderImages.ViewFlipper.VFFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
                 if (item == 0) {
                     selectedFragment = new VFFragment();
                 } else if (item == 1) {
-                    //selectedFragment = new CIVPFragment();
+                    selectedFragment = new CIVPFragment();
                 } else if (item == 2) {
-                    //selectedFragment = new CI3VP2Fragment();
+                    selectedFragment = new CI3VP2Fragment();
                 } else if (item == 3) {
-                    //selectedFragment = new SVFragment();
+                    selectedFragment = new SVFragment();
                 }
 
                 if (selectedFragment != null) {

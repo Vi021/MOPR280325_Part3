@@ -27,21 +27,30 @@ public class VFFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_vf, container, false);
 
         vFlipper = view.findViewById(R.id.vFlipper);
+        vFlipperAction();
 
         return view;
     }
 
     private void vFlipperAction() {
-        ArrayList<String> strings = new ArrayList<>();
-        strings.add("http://app.iotstar.vn:8081/appfoods/flipper/quangcao.png");
-        strings.add("http://app.iotstar.vn:8081/appfoods/flipper/coffe.jpg");
-        strings.add("http://app.iotstar.vn:8081/appfoods/flipper/companypizza.jpeg");
-        strings.add("http://app.iotstar.vn:8081/appfoods/flipper/themoingon.jpeg");
+//        ArrayList<String> strings = new ArrayList<>();
+//        strings.add("http://app.iotstar.vn:8081/appfoods/flipper/quangcao.png");
+//        strings.add("http://app.iotstar.vn:8081/appfoods/flipper/coffe.jpg");
+//        strings.add("http://app.iotstar.vn:8081/appfoods/flipper/companypizza.jpeg");
+//        strings.add("http://app.iotstar.vn:8081/appfoods/flipper/themoingon.jpeg");
 
-        int count = strings.size();
+        ArrayList<Integer> ints = new ArrayList<>();
+        ints.add(R.drawable.pic1);
+        ints.add(R.drawable.pic2);
+        ints.add(R.drawable.pic3);
+        ints.add(R.drawable.pic4);
+        ints.add(R.drawable.pic5);
+
+        int count = ints.size();
         for (int i = 0; i < count; i++) {
             ImageView imageView = new ImageView(getContext());
-            Glide.with(requireContext()).load(strings.get(i)).into(imageView);
+            //Glide.with(requireContext()).load(strings.get(i)).into(imageView);
+            Glide.with(requireContext()).load(ints.get(i)).into(imageView);
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             vFlipper.addView(imageView);
         }
